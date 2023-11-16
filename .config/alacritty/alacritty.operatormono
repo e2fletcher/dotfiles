@@ -8,42 +8,8 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-# import:
-#   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-
-# TokyoNight Alacritty Colors
-colors:
-  # Default colors
-  primary:
-    background: '0x222436'
-    foreground: '0xc8d3f5'
-
-  # Normal colors
-  normal:
-    black:   '0x1b1d2b'
-    red:     '0xff757f'
-    green:   '0xc3e88d'
-    yellow:  '0xffc777'
-    blue:    '0x82aaff'
-    magenta: '0xc099ff'
-    cyan:    '0x86e1fc'
-    white:   '0x828bb8'
-
-  # Bright colors
-  bright:
-    black:   '0x444a73'
-    red:     '0xff757f'
-    green:   '0xc3e88d'
-    yellow:  '0xffc777'
-    blue:    '0x82aaff'
-    magenta: '0xc099ff'
-    cyan:    '0x86e1fc'
-    white:   '0xc8d3f5'
-
-  indexed_colors:
-    - { index: 16, color: '0xff966c' }
-    - { index: 17, color: '0xc53b53' }
-    
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -159,9 +125,9 @@ env:
 font:
   # Normal (roman) font face
   normal:
-    family: MonaspaceNeon
+    family: Alacritty
     # style: Medium
-    style: SemiBold
+    style: Medium
   # Font family
   #
   # Default:
@@ -169,8 +135,8 @@ font:
   #   - (Linux/BSD) monospace
   #   - (Windows) Consolas
   bold:
-    family: MonaspaceArgon
-    style: ExtraBold
+    family: Alacritty
+    style: Bold
 
   # Bold font face
   # bold:
@@ -189,16 +155,14 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: MonaspaceRadon
+    family: Alacritty
     # style: SemiBold Italic
     # family: IBM Plex Mono
-    style: SemiBold
+    style: Medium Italic
     # style: SemiBold Italic
 
   # Bold italic font face
-  bold_italic:
-    family: MonaspaceRadon
-    style: Bold
+  #bold_italic:
   # Font family
   #
   # If the bold italic family is not specified, it will fall back to the
@@ -209,12 +173,12 @@ font:
   #style: Bold Italic
 
   # Point size
-  size: 11
+  size: 11.5
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
-    x: -1
+    x: 0
     y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
@@ -229,7 +193,7 @@ font:
 # If `true`, Alacritty will use a custom built-in font for box drawing
 # characters (Unicode points 2500 - 259f).
 #
-# builtin_box_drawing: true
+#builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true

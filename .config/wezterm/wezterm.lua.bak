@@ -1,0 +1,52 @@
+local wezterm = require("wezterm")
+
+wezterm.font_with_fallback({
+	{ family = "Monaspace Neon", weight = 500 },
+	"Noto Color Emoji",
+	"Symbols Nerd Font Mono",
+})
+
+return {
+	front_end = "OpenGL",
+	initial_rows = 55,
+	initial_cols = 180,
+	enable_wayland = true,
+	cell_width = 1.0,
+	allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace",
+	dpi = 96.0,
+	window_padding = {
+		left = 0,
+		right = 0,
+		top = 0,
+		bottom = 0,
+	},
+	freetype_load_target = "Light",
+	freetype_render_target = "HorizontalLcd",
+	hide_tab_bar_if_only_one_tab = true,
+	color_scheme = "Tokyo Night Moon",
+	font_size = 10,
+	font = wezterm.font({
+		family = "Monaspace Neon",
+		weight = 600,
+		-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	}),
+	font_rules = {
+		{
+			intensity = "Bold",
+			font = wezterm.font({
+				family = "Monaspace Argon",
+				weight = 800,
+			}),
+		},
+		{
+			intensity = "Normal",
+			italic = true,
+			font = wezterm.font({
+				style = "Italic",
+				family = "Monaspace Radon",
+				weight = 600,
+				italic = false,
+			}),
+		},
+	},
+}

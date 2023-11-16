@@ -1,0 +1,55 @@
+local wezterm = require("wezterm")
+
+wezterm.font_with_fallback({
+	{ family = "Operator Mono SSm", weight = 350 },
+	"Noto Color Emoji",
+	"Symbols Nerd Font Mono",
+})
+
+return {
+	front_end = "OpenGL",
+	initial_rows = 55,
+	initial_cols = 180,
+	enable_wayland = true,
+	cell_width = 1.0,
+	dpi = 96.0,
+	window_padding = {
+		left = 0,
+		right = 0,
+		top = 0,
+		bottom = 0,
+	},
+	foreground_text_hsb = {
+		hue = 1.0,
+		saturation = 1.0,
+		brightness = 1.15,
+	},
+	hide_tab_bar_if_only_one_tab = true,
+	color_scheme = "Tokyo Night Moon",
+	font_size = 10.1,
+	freetype_render_target = "Normal",
+	font = wezterm.font({
+		family = "Operator Mono SSm",
+		weight = 350,
+		-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	}),
+	font_rules = {
+		{
+			intensity = "Bold",
+			font = wezterm.font({
+				family = "Operator Mono SSm",
+				weight = "Bold",
+			}),
+		},
+		{
+			intensity = "Normal",
+			italic = true,
+			font = wezterm.font({
+				style = "Italic",
+				family = "Operator Mono SSm",
+				weight = 350,
+				italic = true,
+			}),
+		},
+	},
+}
